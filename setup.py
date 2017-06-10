@@ -7,12 +7,15 @@ from setuptools import setup
 exec(open('photon/version.py').read())
 
 setup(name='photon',
-        version=__version__
-        descrition="PhotPipe python toolbox",
+        version=__version__,
+        description="PhotPipe python toolbox",
         author='Marco Riello',
         author_email='riellomarco@gmail.com',
         license='MIT',
-        packages=['photon'],
+        packages=[
+            'photon',
+            'photon.plotting'
+            ],
         install_requires=['astropy>=1.3.0',
             'numpy',
             'matplotlib>=2.0.0',
